@@ -23,7 +23,7 @@
        
        const quitarActivo = seccion => {
          seccion.classList.remove('clase__activa');
-         seccion.style.cssText = "background-color: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%)";
+         seccion.style.cssText = "background-color: (0deg, rgba(255,255,255,.1) 0%,";
        };
        
        const agregarActivo = (condicional, seccion) => {
