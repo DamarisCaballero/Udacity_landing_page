@@ -1,0 +1,228 @@
+        body {
+            background: rgb(103, 65, 136);
+            background: linear-gradient(0deg,rgb(195, 172, 208) 0%, rgb(195, 172, 208)100%);
+            margin: 0;
+            font-family: 'Merriweather', serif;
+            color: #fff;
+        }
+
+        h1 {
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 3em;
+            margin: 2em 1rem;
+        }
+
+        @media only screen and (min-width: 35em){
+            h1 {
+                font-size: 7em;
+                margin: 2em 4rem 1em;
+            }}
+
+        h2 {
+            border-bottom: 1px solid rgb(1, 1, 1);
+            font-family: 'Oxygen', Sans-Serif;
+            font-size: 3em;
+            color: rgb(103, 65, 136);
+        }
+
+        p {
+            line-height: 1.6em;
+            color: rgb(102, 54, 106);
+        }
+
+         main {
+            margin: 10vh 1em 10vh;
+        }
+
+        .main-hero {
+            min-height: 40vh;
+            padding-top: 3em;
+        }
+
+        section {
+            position: relative;
+            min-height: 80vh;
+        }
+
+         .navbar__menu ul {
+            padding: 2%;
+            padding-left: 0;
+            margin: 0;
+            text-align: center;
+         }
+
+        .navbar__menu li {
+            display: inline-flex;
+            padding-left: 2%;
+        }
+
+        .navbar__menu .menu__link {
+            display: inline-block;
+            font-weight: bold;
+            text-decoration: none;
+            color: rgb(251, 247, 252);
+        }
+
+        .navbar__menu .menu__link:hover {
+            background: rgb(176, 108, 201);
+            color: rgb(4, 4, 4);
+            transition: ease 0.4s all;
+        }
+
+        .page__header {
+            background: rgb(112, 45, 120);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 5;
+        }
+
+
+        footer {
+            background-color: rgb(141, 96, 164);
+            color: #fff;
+            padding: 2em 0;
+            padding-left: 2rem;
+        }
+        
+        footer h5 {
+            color: #fff;
+            font-size: 1.2em;
+            margin-bottom: 1em;
+            text-transform: uppercase;
+        }
+        
+        footer a {
+            color: #fff;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+        
+        hr {
+            border-top: 1px solid #ccc;
+            margin: 2em 0;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        @media (max-width: 992px) {
+            .col-lg-4 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1em;
+            }
+        }
+        @media (min-width: 992px) {
+            .col-lg-4 {
+            width: 33.33%;
+            float: left;
+            }
+        }
+        
+        .landing__container {
+            padding: 1em;
+            text-align: left;
+        }
+
+        @media only screen and (min-width: 35em){
+            .landing__container {
+                max-width: 50em;
+                padding: 4em;
+            }
+        }
+
+        section:nth-of-type(even) .landing__container {
+            margin-right: 0;
+            margin-left: auto;
+            text-align: right; 
+        }
+
+        
+        section:nth-of-type(odd) .landing__container::before {
+            content: '';
+            background: rgba(247, 18, 243, 0.187);
+            position: absolute;
+            z-index: -5;
+            width: 30vh;
+            height: 30vh;
+            border-radius: 50%;
+            opacity: 0;
+            transition: ease 0.5s all;
+        }
+
+        section:nth-of-type(even) .landing__container::before {
+            content: '';
+            background: rgb(239, 27, 214);
+            background: linear-gradient(0deg, rgba(184, 5, 220, 0.1) 0%, rgba(171, 4, 213, 0.2) 100%);
+            position: absolute;
+            top: 3em;
+            right: 3em;
+            z-index: -5;
+            width: 20vh;
+            height: 20vh;
+            border-radius: 50%;
+            opacity: 0;
+            transition: ease 0.5s all;
+        }
+
+        section:nth-of-type(3n) .landing__container::after {
+            content: '';
+            background: rgb(239, 27, 214);
+            background: linear-gradient(0deg, rgba(184, 5, 220, 0.1) 0%, rgba(171, 4, 213, 0.2) 100%);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -5;
+            width: 10vh;
+            height: 10vh;
+            border-radius: 50%;
+            opacity: 0;
+            transition: ease 0.5s all;
+        }
+
+        section:nth-of-type(3n + 1) .landing__container::after {
+            content: '';
+            background: rgb(239, 27, 214);
+            background: linear-gradient(0deg, rgba(184, 5, 220, 0.1) 0%, rgba(171, 4, 213, 0.2) 100%);
+            position: absolute;
+            right: 20vw;
+            bottom: -5em;
+            z-index: -5;
+            width: 15vh;
+            height: 15vh;
+            border-radius: 50%;
+            opacity: 0;
+            transition: ease 0.5s all;
+        }
+
+        section.your-active-class {
+            background: rgb(0, 0, 0);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        section.your-active-class .landing__container::before {
+            opacity: 1;
+            animation: rotate 4s linear 0s infinite forwards;
+        }
+
+        section.your-active-class .landing__container::after {
+            opacity: 1;
+            animation: rotate 5s linear 0s infinite forwards reverse;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg)
+                        translate(-1em)
+                        rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg)
+                        translate(-1em) 
+                        rotate(-360deg);
+            }
+        }
