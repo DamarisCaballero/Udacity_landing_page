@@ -44,16 +44,24 @@
             min-height: 80vh;
         }
 
+        .navbar__menu a {
+            color: white;
+            text-decoration: none;
+          }
+          
+
          .navbar__menu ul {
             padding: 2%;
             padding-left: 0;
             margin: 0;
             text-align: center;
+          
          }
 
         .navbar__menu li {
             display: inline-flex;
             padding-left: 2%;
+           
         }
 
         .navbar__menu .menu__link {
